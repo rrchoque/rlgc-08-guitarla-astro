@@ -1,6 +1,9 @@
 ---
 import logo from '../img/logo.svg'
 import carrito from '../img/carrito.png'
+
+const pathname = Astro.url.pathname;
+
 ---
 <header class="header">
     <div class="contenedor barra">
@@ -11,18 +14,23 @@ import carrito from '../img/carrito.png'
         <nav class="navegacion">
             <a
                 href="/"
+                class={pathname === '/' ? 'active' : '' }
             >Inicio</a>
             <a
                 href="/nosotros"
+                class={pathname === '/nosotros' ? 'active' : '' }
             >Nosotros</a>
             <a
                 href="/guitarras"
+                class={pathname === '/guitarras' ? 'active' : '' }
             >Tienda</a>
             <a
                 href="/blog"
+                class={pathname === '/blog' ? 'active' : '' }
             >Blog</a>
             <a
                 href="/carrito"
+                class={pathname === '/carrito' ? 'active' : '' }
             >
                 <img src={carrito} alt="carrito de compras" />
             </a>

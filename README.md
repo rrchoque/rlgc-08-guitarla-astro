@@ -1,3 +1,14 @@
+# Proyecto: GuitarLA tienda de venta de guitarras con Astro
+
+Proyecto N° 8 del curso [React - La Guía Completa: Hooks Context Redux MERN +15 Apps](https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/) de la plataforma Udemy dictado por [Juan Pablo De la torre Valdez](https://www.udemy.com/user/juanpablodelatorrevaldez/).
+
+# Tecnologías utilizadas
+Tecnología|Web oficial
+-|-
+React JS|[https://reactjs.org/](https://reactjs.org/)
+Astro|[https://astro.build/](https://astro.build/)
+Strapi|[https://strapi.io/](https://strapi.io/)
+Local Storage||
 # Astro Starter Kit: Basics
 
 ```

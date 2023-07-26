@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Guitarra from '../components/Guitarra.astro'
 import Post from '../components/Post.astro';
+import Curso from '../components/Curso.astro';
 
 const urlGuitarras = `${import.meta.env.PUBLIC_API_URL}/guitarras?populate=imagen`
 const urlPosts = `${import.meta.env.PUBLIC_API_URL}/posts?populate=imagen`
@@ -38,6 +39,12 @@ const [resGuitarras, resPosts, resCurso] = await Promise.all([
 		) }
 	</main>
 
+	<Curso 
+		titulo={curso?.attributes.titulo}
+		contenido={curso?.attributes.contenido}
+		imagen={curso?.attributes.imagen.data.attributes.url}
+	/>
+
 	<section class="contenedor">
 		<h2 class="heading">Blog</h2>
 
@@ -55,8 +62,8 @@ const [resGuitarras, resPosts, resCurso] = await Promise.all([
 		</div>
 		) }
 	</section>
-</Layout>
-
 <style>
-
+	.curso {
+	background-image: linear-gradient( to right, rgb(0 0 0 / .65), rgb(0 0 0 / .7) ), url(${imagen.data.attributes.url})
+	}
 </style>
